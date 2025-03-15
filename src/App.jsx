@@ -20,7 +20,7 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/soil-sustainability" element={<SoilSustainability />} />
+            <Route path="/soil" element={<SoilSustainability />} />
             <Route path="/gardening" element={<Gardening />} />
             <Route path="/composting" element={<Composting />} />
             <Route path="/farming" element={<Farming />} />
