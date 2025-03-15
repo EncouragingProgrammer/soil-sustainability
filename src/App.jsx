@@ -9,6 +9,7 @@ import Resources from './pages/Resources';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import NotFound from './pages/NotFound';
+import SoilNutrients from './pages/SoilNutrients';
 
 import './styles/App.css';
 
@@ -24,6 +25,7 @@ function App() {
             <Route path="/gardening" element={<Gardening />} />
             <Route path="/composting" element={<Composting />} />
             <Route path="/farming" element={<Farming />} />
+            <Route path="/soil-nutrients" element={<SoilNutrients />} />
             <Route path="/zone-finder" element={<GrowingZoneFinder />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="*" element={<NotFound />} />

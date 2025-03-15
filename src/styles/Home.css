@@ -1,0 +1,104 @@
+/* Home.css */
+
+.programs-section {
+    margin-top: 40px;
+  }
+  
+  .programs-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: flex-start;
+  }
+  
+  .programs-text {
+    flex: 1 1 60%;
+  }
+  
+  .programs-text ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .programs-text li {
+    margin-bottom: 12px;
+    font-size: 1.125rem;
+    color: var(--dark-brown);
+  }
+  
+  .programs-images {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1 1 35%;
+  }
+  
+  .program-image {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive: Stack the text and images on smaller screens */
+  @media (max-width: 768px) {
+    .programs-content {
+      flex-direction: column;
+    }
+  
+    .programs-text,
+    .programs-images {
+      flex: 1 1 100%;
+    }
+  }
+  
+  /* Why It Matters Section */
+.why-it-matters-section {
+    margin-top: 40px;
+  }
+  
+  .why-it-matters-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: center;
+  }
+  
+  .why-it-matters-image {
+    flex: 1 1 40%;
+  }
+  
+  .why-it-matters-image img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .why-it-matters-text {
+    flex: 1 1 55%;
+  }
+  
+  .why-it-matters-text h2 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+  
+  .why-it-matters-text p {
+    font-size: 1.125rem;
+    color: var(--dark-brown);
+    line-height: 1.6;
+  }
+  
+  /* Responsive behavior */
+  @media (max-width: 768px) {
+    .why-it-matters-content {
+      flex-direction: column;
+    }
+  
+    .why-it-matters-image,
+    .why-it-matters-text {
+      flex: 1 1 100%;
+    }
+  }
+  

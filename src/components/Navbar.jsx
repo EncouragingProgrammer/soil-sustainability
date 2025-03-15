@@ -15,6 +15,7 @@ export default function Navbar() {
         <nav className="navbar-links">
           <Link to="/">Home</Link>
           <Link to="/soil">Soil Sustainability</Link>
+          <Link to="/soil-nutrients">Soil Nutrients</Link>
           <Link to="/gardening">Gardening</Link>
           <Link to="/composting">Composting</Link>
           <Link to="/farming">Farming</Link>

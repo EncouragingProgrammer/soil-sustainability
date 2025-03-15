@@ -1,0 +1,39 @@
+/* Resources.css */
+
+/* Container for resource buttons */
+.resource-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  
+  /* Link as a button */
+  .resource-buttons a {
+    display: inline-block;
+    background-color: var(--reddish-brown);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 16px 24px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .resource-buttons a:hover {
+    background-color: var(--warm-brown);
+    transform: translateY(-2px);
+  }
+  
+  /* Acknowledgement section */
+  .acknowledgement {
+    background-color: var(--tan);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: var(--dark-brown);
+  }
+  
