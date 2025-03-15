@@ -53,6 +53,7 @@
   font-size: 2.25rem; /* 36px */
   color: var(--warm-brown);
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .section p,
@@ -127,4 +128,29 @@
   width: 300px;
   background-color: #fff;
   color: var(--dark-brown);
+}
+
+/* table formating */
+table,
+th,
+td {
+  border: 0.5px solid;
+  margin-left: auto;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mapZone {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centerheading {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
