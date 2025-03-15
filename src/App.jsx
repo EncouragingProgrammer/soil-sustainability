@@ -14,13 +14,13 @@ import './styles/App.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/soil-sustainability">
       <div className="app-container">
         <Navbar />
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/soil-sustainability" element={<SoilSustainability />} />
+            <Route path="/soil" element={<SoilSustainability />} />
             <Route path="/gardening" element={<Gardening />} />
             <Route path="/composting" element={<Composting />} />
             <Route path="/farming" element={<Farming />} />
