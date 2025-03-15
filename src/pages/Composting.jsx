@@ -5,12 +5,12 @@ import '../styles/App.css';
 
 // Composting images
 import compost1 from '../assets/compost1.png';
-import compost2 from '../assets/compost1.png';
-import compost3 from '../assets/compost1.png';
-import compost4 from '../assets/compost1.png';
-import compost5 from '../assets/compost1.png';
-import compost6 from '../assets/compost1.png';
-import compost7 from '../assets/compost1.png';
+import compost2 from '../assets/compost2.png';
+import compost3 from '../assets/compost3.webp';
+import compost4 from '../assets/compost.png';
+import compost5 from '../assets/compost5.jpeg';
+import compost6 from '../assets/compost6.jpeg';
+import compost7 from '../assets/compost7.png';
 
 
 export default function Composting() {
@@ -99,19 +99,9 @@ export default function Composting() {
       {/* Why Compost */}
       <section className="section">
         <h2>Why Start Composting?</h2>
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '20px',
-            flexWrap: 'wrap',
-          }}
-        >
 
         <div className="section-content">
-          <div style={{ maxWidth: '600px', textAlign: 'left' }}>
-            <ul className="list-disc pl-5 mb-4">
+            <ul>
               <li><strong>Reduce waste</strong> by keeping organics out of landfills.</li>
               <li><strong>Lower greenhouse gases</strong> by preventing methane emissions.</li>
               <li><strong>Enrich soil</strong> with natural compost instead of synthetic fertilizers.</li>
@@ -121,19 +111,6 @@ export default function Composting() {
             <p>
               Whether you're composting on a balcony or a farm, our leveling system helps you build composting skills step-by-step.
             </p>
-          </div>
-
-          <img
-            src={compost1}
-            alt="Composting process illustration"
-            style={{
-              width: '250px',
-              height: 'auto',
-              borderRadius: '12px',
-              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-            }}
-          />
-        </div>
         </div>
       </section>
 
