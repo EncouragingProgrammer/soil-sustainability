@@ -14,7 +14,7 @@ import './styles/App.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/soil-sustainability">
       <div className="app-container">
         <Navbar />
         <main className="main-content">
