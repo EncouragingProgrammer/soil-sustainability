@@ -46,7 +46,7 @@
   margin-bottom: 48px;
   padding: 24px;
   background-color: var(--tan);
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .section h2 {
@@ -152,5 +152,10 @@ td {
 .centerheading {
   display: block;
   margin-right: auto;
-  margin-left: auto;
+  margin-left: auto;.section-description {
+    margin-bottom: 20px;
+    color: var(--warm-brown);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
 }

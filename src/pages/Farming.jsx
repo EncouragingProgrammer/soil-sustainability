@@ -9,12 +9,13 @@ export default function Farming() {
           Learn about regenerative farming practices that restore soil health, improve biodiversity, and support sustainable agriculture.
         </p>
         <ul>
-          <li>✅ Crop Rotation</li>
-          <li>✅ Cover Cropping</li>
-          <li>✅ No-Till Farming</li>
-          <li>✅ Polyculture & Permaculture</li>
+          <li>Crop Rotation</li>
+          <li>Cover Cropping</li>
+          <li>No-Till Farming</li>
+          <li>Polyculture & Permaculture</li>
         </ul>
         <p>Explore more strategies to help build a sustainable future for farming communities.</p>
+        <p>More information to come!</p>
       </div>
     );
   }
