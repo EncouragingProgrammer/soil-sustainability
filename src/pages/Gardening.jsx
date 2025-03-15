@@ -1,6 +1,17 @@
 import { useState } from 'react';
 import Accordion from '../components/Accordion';
 import '../styles/LevelingSystem.css';
+import '../styles/App.css';
+
+// Gardening images
+import compost from '../assets/compost.png'
+import garden from '../assets/garden.png'
+import pest from '../assets/pest.png';
+import plant1 from '../assets/plant1.png';
+import plant2 from '../assets/plant2.png';
+import regen from '../assets/regen.png';
+import seed from '../assets/seed.png';
+import water from '../assets/water.png'
 
 export default function Gardening() {
   const [selectedLevel, setSelectedLevel] = useState(1);
@@ -8,47 +19,70 @@ export default function Gardening() {
   const levels = [
     {
       level: 1,
-      title: "Getting Started: Plant Your First Seed",
-      urban: "Start with a small container on your balcony, windowsill, or kitchen. Herbs like basil or mint are perfect for beginners.",
-      rural: "Find a small patch of land or use a raised bed. Start with easy vegetables like lettuce or radishes.",
+      title: "Level 1: Plant Your First Seed",
+      objective: "Take your first step into gardening by planting something simple and watching it grow.",
+      urban: "Find a small container or windowsill pot. Choose an easy herb like basil or mint. Fill the pot with soil, plant the seeds, water gently, and place it in a sunny spot. Track its progress each day.",
+      rural: "Choose a small garden bed or use a raised box. Plant fast-growing vegetables like lettuce or radishes. Prepare the soil, plant the seeds, water regularly, and observe the changes each morning.",
+      reward: "Experience the excitement of new growth and gain confidence to expand your garden.",
+      image: seed
     },
     {
       level: 2,
-      title: "Soil Prep & Composting",
-      urban: "Create a mini compost bin under the sink or balcony with kitchen scraps.",
-      rural: "Start a compost pile or use animal manure to enrich your garden soil.",
+      title: "Level 2: Build Healthy Soil & Start Composting",
+      objective: "Improve your soil's health by composting and learning the basics of soil preparation.",
+      urban: "Start a mini compost bin on your balcony or under your sink. Add kitchen scraps like fruit peels, coffee grounds, and dry leaves. Turn it weekly to speed up decomposition.",
+      rural: "Start an outdoor compost pile or bin. Add grass clippings, dry leaves, vegetable scraps, and, if possible, well-rotted manure. Turn the pile every couple of weeks.",
+      reward: "Create rich compost to feed your garden and reduce waste at the same time.",
+      image: compost
     },
     {
       level: 3,
-      title: "Choosing the Right Plants",
-      urban: "Focus on compact vegetables or vertical gardens (e.g., tomatoes, peppers).",
-      rural: "Consider larger crops, berries, or fruit trees suited to your zone.",
+      title: "Level 3: Select the Right Plants",
+      objective: "Choose plants that thrive in your growing zone and fit your garden space.",
+      urban: "Research your hardiness zone. Pick compact vegetables like cherry tomatoes or peppers that can grow in containers or vertical gardens.",
+      rural: "Identify your growing zone and choose crops suited to your local climate. Try planting berries, fruit trees, or heirloom vegetables for diversity.",
+      reward: "A well-planned garden with plants that thrive in your space and climate.",
+      image: plant1
     },
     {
       level: 4,
-      title: "Watering & Maintenance",
-      urban: "Use self-watering containers or drip irrigation.",
-      rural: "Set up rain barrels and plan an irrigation schedule.",
+      title: "Level 4: Master Watering & Maintenance",
+      objective: "Learn how to water your plants effectively and maintain your garden’s health.",
+      urban: "Set a watering schedule for your containers. Use self-watering pots or drip irrigation if possible. Check soil moisture daily.",
+      rural: "Install rain barrels to collect water. Water plants in the early morning or evening. Mulch garden beds to retain moisture and suppress weeds.",
+      reward: "Consistently healthy plants with strong roots and reduced water waste.",
+      image: water
     },
     {
       level: 5,
-      title: "Pest Management & Companion Planting",
-      urban: "Use natural repellents and companion plants like marigolds.",
-      rural: "Encourage beneficial insects, and rotate crops for pest control.",
+      title: "Level 5: Defend Your Garden with Companion Planting & Pest Control",
+      objective: "Protect your garden naturally by attracting beneficial insects and planting allies.",
+      urban: "Plant marigolds or basil near your vegetables to repel pests. Use neem oil or homemade garlic spray for minor infestations.",
+      rural: "Encourage beneficial insects like ladybugs by planting pollinator-friendly flowers. Rotate crops each season and use row covers for protection.",
+      reward: "A resilient garden with fewer pests and a balanced ecosystem.",
+      image: pest
     },
     {
       level: 6,
-      title: "Expanding Your Garden",
-      urban: "Try hydroponics or join a community garden.",
-      rural: "Increase crop variety or try greenhouse growing.",
+      title: "Level 6: Expand Your Garden’s Potential",
+      objective: "Increase the size and variety of your garden using more advanced techniques.",
+      urban: "Try growing in new ways: vertical gardens, hydroponics, or join a local community garden. Experiment with different herbs or leafy greens.",
+      rural: "Expand your plot or add new beds. Explore greenhouse growing to extend your season. Experiment with heritage or specialty crops.",
+      reward: "Greater harvests, increased diversity, and more self-sufficiency in your gardening.",
+      image: garden
     },
     {
       level: 7,
-      title: "Sustainable & Regenerative Practices",
-      urban: "Implement permaculture in small spaces, seed saving, and compost tea.",
-      rural: "Focus on soil regeneration, cover crops, and biodiverse planting.",
-    },
+      title: "Level 7: Regenerative & Sustainable Gardening",
+      objective: "Adopt sustainable practices to create a self-sustaining and regenerative garden.",
+      urban: "Apply permaculture principles in small spaces. Save seeds from your healthiest plants. Make and use compost tea to feed your garden.",
+      rural: "Plant cover crops to enrich your soil. Focus on crop rotation, seed saving, and diversifying your planting to support local wildlife and soil health.",
+      reward: "A regenerative garden that nurtures both the earth and your community for years to come.",
+      image: regen
+    }
   ];
+  
+  
 
   const currentLevel = levels.find((lvl) => lvl.level === selectedLevel);
 
@@ -65,16 +99,42 @@ export default function Gardening() {
       {/* Why Garden */}
       <section className="section">
         <h2>Why Start a Garden?</h2>
-        <ul>
-          <li><strong>Grow your own food</strong> and enjoy fresher, healthier meals.</li>
-          <li><strong>Support local ecosystems</strong> by planting native species and flowers that attract pollinators.</li>
-          <li><strong>Reduce your environmental footprint</strong> by cutting back on packaging and food transportation.</li>
-          <li><strong>Improve mental well-being</strong> through time outdoors and nurturing plants.</li>
-          <li><strong>Build stronger communities</strong> with community gardens and shared spaces.</li>
-        </ul>
-        <p>
-          Whether you are just getting started or looking to deepen your gardening knowledge, our step-by-step leveling system will help you grow your skills and your garden.
-        </p>
+
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '20px',
+            flexWrap: 'wrap',
+          }}
+        >
+
+          <div style={{ maxWidth: '600px', textAlign: 'left' }}>
+            <ul className="list-disc pl-5 mb-4">
+              <li><strong>Grow your own food</strong> and enjoy fresher, healthier meals.</li>
+              <li><strong>Support local ecosystems</strong> by planting native species and flowers that attract pollinators.</li>
+              <li><strong>Reduce your environmental footprint</strong> by cutting back on packaging and food transportation.</li>
+              <li><strong>Improve mental well-being</strong> through time outdoors and nurturing plants.</li>
+              <li><strong>Build stronger communities</strong> with community gardens and shared spaces.</li>
+            </ul>
+
+            <p>
+              Whether you are just getting started or looking to deepen your gardening knowledge, our step-by-step leveling system will help you grow your skills and your garden.
+            </p>
+          </div>
+
+          <img
+            src={plant2}
+            alt="Beautiful plant illustration"
+            style={{
+              width: '250px',
+              height: 'auto',
+              borderRadius: '12px', 
+              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+            }}
+          />
+        </div>
       </section>
 
       {/* Leveling Up System */}
@@ -93,15 +153,32 @@ export default function Gardening() {
                 </div>
 
                 {selectedLevel === lvl.level && (
-                  <div className="level-tab-content">
-                    <h3>{lvl.title}</h3>
+                  <div
+                    className={`level-tab-content ${lvl.level % 2 === 0 ? 'level-content-row-reverse' : 'level-content-row'}`}
+                  >
+                    {/* Text Content */}
+                    <div className="level-text">
+                      <h3>{lvl.title}</h3>
 
-                    <div className="tips">
-                      <h4>Urban Gardening Tips</h4>
-                      <p>{lvl.urban}</p>
+                      <p className="mt-2"><strong>Objective:</strong> {lvl.objective}</p>
 
-                      <h4>Rural Gardening Tips</h4>
-                      <p>{lvl.rural}</p>
+                      <div className="tips mt-4">
+                        <h4>Urban Action</h4>
+                        <p>{lvl.urban}</p>
+
+                        <h4 className="mt-3">Rural Action</h4>
+                        <p>{lvl.rural}</p>
+                      </div>
+
+                      <p className="mt-4"><strong>Reward:</strong> {lvl.reward}</p>
+                    </div>
+
+                    {/* Image */}
+                    <div className="level-image">
+                      <img
+                        src={lvl.image}
+                        alt={`Level ${lvl.level} Illustration`}
+                      />
                     </div>
                   </div>
                 )}
@@ -111,9 +188,13 @@ export default function Gardening() {
         </aside>
       </div>
 
-      {/* Tips & FAQs */}
+      {/* Tips*/}
       <section className="section">
-        <h2>Gardening Tips & FAQs</h2>
+        <h2>Gardening Tips</h2>
+        <p className="section-description">
+          Explore common gardening questions and tips to help you get started or grow your skills!
+        </p>
+
         <Accordion
           items={[
             {
@@ -146,14 +227,9 @@ export default function Gardening() {
         <p>
           If you don’t have space at home, community gardens are a great way to get involved, grow food, and connect with others who share your interest in sustainability and healthy living.
         </p>
-        <a
-          href="https://www.example.com/community-gardens" // Replace with real link
-          target="_blank"
-          rel="noopener noreferrer"
-          className="button"
-        >
-          Find a Community Garden Near You
-        </a>
+        <p>
+          Find a Community Garden Near You!
+        </p>
       </section>
     </div>
   );
