@@ -1,0 +1,47 @@
+/* index.css */
+
+:root {
+  --dark-brown: #3C2F2F;
+  --reddish-brown: #854442;
+  --light-beige: #DFCCAF;
+  --warm-brown: #6F4436;
+  --tan: #BE9B7B;
+
+  /* Optional future accent green */
+  --accent-green: #2F855A;
+}
+
+/* CSS Reset / Normalize (optional) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  color: #2b6cb0;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Utility classes if you want */
+.text-center {
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
