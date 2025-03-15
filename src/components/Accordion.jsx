@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import '../styles/Accordion.css'; // Assuming you’ll add styles here!
 
 export default function Accordion({ items }) {
   const [openIndex, setOpenIndex] = useState(null);
@@ -8,19 +9,22 @@ export default function Accordion({ items }) {
   };
 
   return (
-    <div className="space-y-4">
+    <div className="accordion-container">
       {items.map((item, index) => (
-        <div key={index} className="border rounded-lg">
+        <div key={index} className="accordion-item">
           <button
             onClick={() => toggle(index)}
-            className="w-full text-left px-4 py-3 flex justify-between items-center bg-gray-100 hover:bg-gray-200"
+            className={`accordion-header ${openIndex === index ? 'open' : ''}`}
           >
-            <span className="font-medium">{item.question}</span>
-            <span>{openIndex === index ? '-' : '+'}</span>
+            <span className="accordion-question">{item.question}</span>
+            <span className="accordion-icon">{openIndex === index ? '−' : '+'}</span>
           </button>
-          {openIndex === index && (
-            <div className="px-4 py-3 text-gray-700 bg-white">{item.answer}</div>
-          )}
+
+          <div
+            className={`accordion-content ${openIndex === index ? 'open' : ''}`}
+          >
+            <p>{item.answer}</p>
+          </div>
         </div>
       ))}
     </div>

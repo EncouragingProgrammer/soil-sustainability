@@ -1,6 +1,17 @@
 import { useState } from 'react';
 import Accordion from '../components/Accordion';
 import '../styles/LevelingSystem.css';
+import '../styles/App.css';
+
+// Composting images
+import compost1 from '../assets/compost1.png';
+import compost2 from '../assets/compost1.png';
+import compost3 from '../assets/compost1.png';
+import compost4 from '../assets/compost1.png';
+import compost5 from '../assets/compost1.png';
+import compost6 from '../assets/compost1.png';
+import compost7 from '../assets/compost1.png';
+
 
 export default function Composting() {
   const [selectedLevel, setSelectedLevel] = useState(1);
@@ -8,103 +19,125 @@ export default function Composting() {
   const levels = [
     {
       level: 1,
-      title: "Start Separating Your Organic Waste",
-      urban: "Begin by collecting fruit and vegetable scraps in a countertop bin or sealed container. If available, use your city's green bin program.",
-      rural: "Designate a small area or bin outdoors where you can begin to collect kitchen scraps and yard waste.",
+      title: "Level 1: Start Separating Your Organic Waste",
+      objective: "Take the first step by collecting your kitchen scraps and yard waste.",
+      urban: "Collect fruit and vegetable scraps in a countertop bin or sealed container. Use your city's green bin program if available.",
+      rural: "Designate a bin outdoors for kitchen scraps and yard waste collection.",
+      reward: "Develop the habit of separating organic waste from garbage.",
+      image: compost1
     },
     {
       level: 2,
-      title: "Set Up a Composting System",
-      urban: "Use a small compost tumbler or bin on a balcony or shared outdoor space. If space is limited, try vermicomposting indoors with a worm bin.",
-      rural: "Create a compost pile or bin in your yard. Ensure it's accessible and properly contained to avoid attracting pests.",
+      title: "Level 2: Set Up a Composting System",
+      objective: "Create a system to compost your collected organic waste.",
+      urban: "Use a small compost tumbler on your balcony or vermicomposting indoors.",
+      rural: "Create an outdoor compost pile or bin, ensuring it’s well-contained.",
+      reward: "Start producing your own compost to reduce landfill waste.",
+      image: compost2
     },
     {
       level: 3,
-      title: "Balance Greens and Browns",
-      urban: "Collect dry paper, cardboard, and leaves to mix with food scraps. Keep the right ratio for odor-free composting.",
-      rural: "Use grass clippings, straw, and manure to balance your green materials. Turn the pile regularly to speed up decomposition.",
+      title: "Level 3: Balance Greens and Browns",
+      objective: "Achieve the right balance for healthy composting.",
+      urban: "Mix food scraps (greens) with dry paper or leaves (browns). Keep the ratio balanced to avoid odors.",
+      rural: "Use grass clippings and dry leaves in combination with kitchen scraps. Turn your pile regularly.",
+      reward: "Create nutrient-rich compost with the perfect green/brown balance.",
+      image: compost3
     },
     {
       level: 4,
-      title: "Optimize Compost Conditions",
-      urban: "Monitor moisture and add water if the compost is too dry. Turn or shake the bin weekly to aerate the pile.",
-      rural: "Ensure your compost stays moist but not soaked. Turn larger piles every 1-2 weeks for optimal decomposition.",
+      title: "Level 4: Optimize Compost Conditions",
+      objective: "Monitor moisture, temperature, and aeration for optimal decomposition.",
+      urban: "Check moisture weekly and turn/shake your bin to aerate the compost.",
+      rural: "Ensure moisture levels are right. Turn the pile every 1-2 weeks to speed up the process.",
+      reward: "Accelerate composting and produce high-quality compost.",
+      image: compost4
     },
     {
       level: 5,
-      title: "Prevent Pests and Odors",
-      urban: "Avoid meat, dairy, and oily foods. Cover scraps with browns, and keep the bin sealed. Consider a worm bin for indoor use.",
-      rural: "Keep meat and dairy out of your pile. Cover food scraps with hay or leaves to avoid odors and deter animals.",
+      title: "Level 5: Prevent Pests and Odors",
+      objective: "Learn how to manage pests and control odors naturally.",
+      urban: "Avoid composting meat and dairy. Keep the bin sealed and cover scraps with browns.",
+      rural: "Cover food scraps with hay or leaves. Keep meat/dairy out and deter animals.",
+      reward: "Maintain a clean, pest-free composting system.",
+      image: compost5
     },
     {
       level: 6,
-      title: "Harvest and Use Your Compost",
-      urban: "After several months, sift finished compost and use it for potted plants, balcony gardens, or donate to a community garden.",
-      rural: "Use compost to enrich your garden beds, orchards, or crop fields. Apply as mulch or mix into the soil for healthier plants.",
+      title: "Level 6: Harvest and Use Your Compost",
+      objective: "Learn when and how to harvest finished compost for your plants.",
+      urban: "Sift compost and use it for potted plants, balcony gardens, or donate it to a community garden.",
+      rural: "Spread compost in your garden beds, orchards, or crop fields.",
+      reward: "Boost soil health and plant productivity with finished compost.",
+      image: compost6
     },
     {
       level: 7,
-      title: "Advance to Regenerative Practices",
-      urban: "Learn about bokashi composting, compost tea, and other methods to enhance soil health on a small scale.",
-      rural: "Integrate regenerative practices like no-till farming, cover cropping, and large-scale composting to build soil health.",
-    },
+      title: "Level 7: Advance to Regenerative Practices",
+      objective: "Adopt advanced composting techniques and regenerative agriculture methods.",
+      urban: "Learn about bokashi composting, compost tea, and worm castings for soil enhancement.",
+      rural: "Integrate large-scale composting, no-till farming, and cover cropping.",
+      reward: "Achieve sustainable soil health and zero-waste gardening.",
+      image: compost7
+    }
   ];
+  
 
   const currentLevel = levels.find((lvl) => lvl.level === selectedLevel);
 
   return (
     <div className="container">
+
       {/* Hero Section */}
       <section className="hero-section">
-        <h1>Composting Guide</h1>
+        <h1>Composting for a Healthier Planet</h1>
         <p>
-          Reduce waste and create healthy soil by composting at home or through community programs!
+          Composting reduces waste, enriches soil, and lowers your environmental footprint. Start small or go big—every step counts!
         </p>
       </section>
 
-      {/* Composting Basics */}
+      {/* Why Compost */}
       <section className="section">
-        <h2>Why Compost?</h2>
-        <p>
-          Composting turns food scraps and yard waste into valuable soil nutrients. It reduces landfill waste and cuts greenhouse gases.
-        </p>
-        <ul>
-          <li>Enriches soil, helping retain moisture and suppress plant diseases.</li>
-          <li>Reduces methane emissions from landfills.</li>
-          <li>Encourages beneficial bacteria and fungi.</li>
-        </ul>
-      </section>
+        <h2>Why Start Composting?</h2>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '20px',
+            flexWrap: 'wrap',
+          }}
+        >
 
-      {/* What Can and Can't Be Composted */}
-      <section className="section">
-        <h2>What Can You Compost?</h2>
-        <div className="compost-grid">
-          <div className="compost-card compost-yes">
-            <h3>✅ Compostable Items</h3>
-            <ul>
-              <li>Fruit & veggie scraps</li>
-              <li>Coffee grounds & filters</li>
-              <li>Tea bags (non-plastic)</li>
-              <li>Eggshells</li>
-              <li>Yard clippings & leaves</li>
-              <li>Shredded paper & cardboard (no glossy prints)</li>
+        <div className="section-content">
+          <div style={{ maxWidth: '600px', textAlign: 'left' }}>
+            <ul className="list-disc pl-5 mb-4">
+              <li><strong>Reduce waste</strong> by keeping organics out of landfills.</li>
+              <li><strong>Lower greenhouse gases</strong> by preventing methane emissions.</li>
+              <li><strong>Enrich soil</strong> with natural compost instead of synthetic fertilizers.</li>
+              <li><strong>Support healthy ecosystems</strong> by returning nutrients to the earth.</li>
             </ul>
+
+            <p>
+              Whether you're composting on a balcony or a farm, our leveling system helps you build composting skills step-by-step.
+            </p>
           </div>
-          <div className="compost-card compost-no">
-            <h3>🚫 Do NOT Compost</h3>
-            <ul>
-              <li>Meat or fish scraps</li>
-              <li>Dairy products</li>
-              <li>Oily or greasy foods</li>
-              <li>Pet waste</li>
-              <li>Glossy paper or stickers</li>
-              <li>Plastic or metals</li>
-            </ul>
-          </div>
+
+          <img
+            src={compost1}
+            alt="Composting process illustration"
+            style={{
+              width: '250px',
+              height: 'auto',
+              borderRadius: '12px',
+              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+            }}
+          />
+        </div>
         </div>
       </section>
 
-      {/* Leveling Up Composting System (Now repositioned here) */}
+      {/* Leveling Up Composting */}
       <div className="leveling-container">
         <aside className="leveling-sidebar">
           <h2>Composting Levels</h2>
@@ -120,15 +153,30 @@ export default function Composting() {
                 </div>
 
                 {selectedLevel === lvl.level && (
-                  <div className="level-tab-content">
-                    <h3>{lvl.title}</h3>
+                  <div
+                    className={`level-tab-content ${lvl.level % 2 === 0 ? 'level-content-row-reverse' : 'level-content-row'}`}
+                  >
+                    <div className="level-text">
+                      <h3>{lvl.title}</h3>
 
-                    <div className="tips">
-                      <h4>Urban Composting Tips</h4>
-                      <p>{lvl.urban}</p>
+                      <p><strong>Objective:</strong> {lvl.objective}</p>
 
-                      <h4>Rural Composting Tips</h4>
-                      <p>{lvl.rural}</p>
+                      <div className="tips mt-4">
+                        <h4>Urban Action</h4>
+                        <p>{lvl.urban}</p>
+
+                        <h4>Rural Action</h4>
+                        <p>{lvl.rural}</p>
+                      </div>
+
+                      <p><strong>Reward:</strong> {lvl.reward}</p>
+                    </div>
+
+                    <div className="level-image">
+                      <img
+                        src={lvl.image}
+                        alt={`Level ${lvl.level} Illustration`}
+                      />
                     </div>
                   </div>
                 )}
@@ -141,41 +189,34 @@ export default function Composting() {
       {/* Tips & FAQs */}
       <section className="section">
         <h2>Composting Tips & FAQs</h2>
+        <p className="section-description">
+          Explore common composting questions to help you build healthy soil and reduce waste.
+        </p>
+
         <Accordion
           items={[
             {
               question: 'How do I prevent pests?',
-              answer:
-                'Avoid adding meat, dairy, or oily foods. Cover food scraps with dry leaves or shredded paper and keep your compost bin closed.',
+              answer: 'Avoid adding meat, dairy, or oily foods. Cover food scraps with browns like leaves or shredded paper and keep your compost bin sealed.',
             },
             {
               question: 'How often should I turn my compost?',
-              answer:
-                'Turn your pile every 1-2 weeks to keep it aerated. More frequent turning speeds up decomposition.',
+              answer: 'Turn your pile every 1-2 weeks to aerate it. This speeds up decomposition and prevents odors.',
             },
             {
-              question: 'What’s the right balance of materials?',
-              answer:
-                'Aim for 2 parts “browns” (dry leaves, paper) to 1 part “greens” (food scraps, grass clippings).',
+              question: 'What’s the right balance of greens and browns?',
+              answer: 'Aim for two parts browns (carbon-rich materials like dry leaves) to one part greens (nitrogen-rich materials like food scraps).',
             },
           ]}
         />
       </section>
 
-      {/* Green Bin Info */}
+      {/* Green Bin Programs */}
       <section className="section">
         <h2>Green Bin Programs</h2>
         <p>
-          Many cities offer green bin collection programs for organic waste. Check your local guidelines to know what’s accepted!
+          Many cities offer green bin collection programs for organic waste. These programs help divert waste from landfills and create community compost. Check your local guidelines!
         </p>
-        <a
-          href="https://www.example.com/green-bin-guide" // Replace with real link
-          target="_blank"
-          rel="noopener noreferrer"
-          className="button"
-        >
-          Find Your Local Program
-        </a>
       </section>
     </div>
   );
