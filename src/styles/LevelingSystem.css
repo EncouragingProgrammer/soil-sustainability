@@ -1,0 +1,82 @@
+/* Center the entire container and make it take up more width */
+.leveling-container {
+    display: flex;
+    justify-content: center;  /* Centers it horizontally */
+    align-items: flex-start;  /* Aligns top */
+    padding: 40px 20px;       /* Adds spacing around the component */
+    max-width: 1000px;        /* Caps it on very large screens */
+    margin: 0 auto;           /* Centering magic! */
+  }
+  
+  /* Sidebar becomes the primary content container */
+  .leveling-sidebar {
+    width: 100%;               /* Make it fill available space */
+    background-color: var(--dark-brown);
+    color: var(--light-beige);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Optional: give it a minimum width */
+  .leveling-sidebar h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--light-beige);
+  }
+  
+  /* Levels list styles stay the same */
+  .levels-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Level tab styling */
+  .level-tab {
+    background-color: var(--reddish-brown);
+    color: var(--light-beige);
+    margin-bottom: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .level-tab:hover {
+    background-color: var(--warm-brown);
+  }
+  
+  /* Tab header always shows */
+  .level-tab-header {
+    padding: 16px 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Expanded content in the tab */
+  .level-tab-content {
+    padding: 20px;
+    background-color: var(--tan);
+    color: var(--dark-brown);
+  }
+  
+  .level-tab-content h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    color: var(--dark-brown);
+  }
+  
+  .tips h4 {
+    color: var(--reddish-brown);
+    margin-top: 16px;
+  }
+  
+  .tips p {
+    font-size: 1rem;
+    color: var(--dark-brown);
+    margin-bottom: 12px;
+  }
+  
